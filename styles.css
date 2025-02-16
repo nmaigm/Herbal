@@ -1,0 +1,121 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+}
+
+/* Hamburger Menu Button */
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: none;
+}
+
+/* Navigation Menu */
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Submenu */
+nav ul ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #367c39;
+    min-width: 180px;
+}
+
+/* Submenu Level 2 */
+nav ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+/* Show submenu on hover */
+nav ul li:hover > ul {
+    display: block;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    gap: 5px;
+}
+
+.lang-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.lang-btn:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #4CAF50;
+    }
+    
+    nav ul li {
+        text-align: left;
+        width: 100%;
+    }
+
+    /* Show menu when active */
+    nav.active ul {
+        display: flex;
+    }
+}
